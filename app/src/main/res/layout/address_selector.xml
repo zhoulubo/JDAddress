@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@android:color/white"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:text="所在地区"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_colse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_close" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7ee" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,7 +53,7 @@
                 android:text="请选择"
                 android:textColor="@drawable/selector_text_color_tab"
                 android:textSize="14sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/textViewCity"
@@ -37,7 +65,7 @@
                 android:text="请选择"
                 android:textColor="@drawable/selector_text_color_tab"
                 android:textSize="14sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/textViewCounty"
@@ -49,7 +77,7 @@
                 android:text="请选择"
                 android:textColor="@drawable/selector_text_color_tab"
                 android:textSize="14sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/textViewStreet"
@@ -61,7 +89,7 @@
                 android:text="请选择"
                 android:textColor="@drawable/selector_text_color_tab"
                 android:textSize="14sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -70,14 +98,14 @@
             android:layout_width="0dp"
             android:layout_height="2dp"
             android:layout_below="@+id/layout_tab"
-            android:background="@android:color/holo_red_light"/>
+            android:background="@android:color/holo_red_light" />
 
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#e8e8e8"/>
+        android:background="#e8e8e8" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -88,13 +116,13 @@
             android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:divider="@null"/>
+            android:divider="@null" />
 
         <ProgressBar
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
     </FrameLayout>
 
