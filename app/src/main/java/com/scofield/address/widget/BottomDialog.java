@@ -3,6 +3,9 @@ package com.scofield.address.widget;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -28,7 +31,15 @@ public class BottomDialog extends Dialog {
 
     private void init(Context context) {
         selector = new AddressSelector(context);
-        setContentView(selector.getView());
+        ViewGroup root = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.location_select_dialog, null);
+        root.addView(selector.getView());
+        setContentView(root);
+        root.findViewById(R.id.iv_close).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dismiss();
+            }
+        });
 
         Window window = getWindow();
         WindowManager.LayoutParams params = window.getAttributes();
