@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-group = 'com.scofield.address'
+group = 'com.github.zhoulubo'
 android {
     compileSdkVersion 24
     buildToolsVersion "28.0.3"
